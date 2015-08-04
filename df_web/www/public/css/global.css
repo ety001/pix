@@ -1,0 +1,101 @@
+body {
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+.margin-left-20 {
+    margin-left: 20px;
+}
+
+/* Custom container */
+.container {
+    margin: 0 auto;
+    /*max-width: 870px;*/
+}
+.masthead .nav {
+    margin: 0;
+}
+/* Customize the navbar links to be fill the entire space of the .navbar */
+.navbar .navbar-inner {
+    padding: 0;
+}
+.navbar .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+.navbar .nav li {
+    display: table-cell;
+    width: 20%;
+    float: none;
+}
+.navbar .nav li a {
+    font-weight: bold;
+    text-align: center;
+    border-left: 1px solid rgba(255,255,255,.75);
+    border-right: 1px solid rgba(0,0,0,.1);
+}
+.navbar .nav li:first-child a {
+    border-left: 0;
+    border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+    border-right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+/* canvas background */
+.canvas{
+    background:url(/public/img/bg.png) no-repeat;
+    padding-top:46px;
+    padding-left:84px;
+    height:550px;
+    width:550px;
+}
+
+/* animations */
+.animations
+{
+    overflow: auto;
+    height: 190px;
+}
+.animations .active{
+    background-color: #ccc;
+}
+.animations .animation_active{
+    background-color: #ccc;
+}
+.animations .frame{
+    float: left;
+    border:1px solid #ccc;
+    padding: 10px;
+    width: 80px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.animations .frame:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+
+.t_a {
+    position: relative;
+    width: 130px;
+    height: 130px;
+}
+.t_a i{
+    position: absolute;
+    top: 60px;
+    left: 60px;
+}
+
+
+.tmp_color {
+    border: 1px #ccc solid;
+    width:36px;
+    height: 36px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    background-color: #fff;
+}

@@ -1,0 +1,18 @@
+.hexBtnDiv{
+    margin-left: 10px;
+}
+.hexPipeBtn{
+    width: 36px;
+    height: 36px;
+    background: url(/public/img/pipette.png) no-repeat -34px -38px;
+    cursor: pointer;
+}
+.hexPipeBtnOn{
+    width: 36px;
+    height: 36px;
+    background: url(/public/img/pipette.png) no-repeat;
+    cursor: pointer;
+}
+.hexPipeHover{
+    cursor: url(/public/img/pipette.cur),auto;
+}
