@@ -21,14 +21,18 @@ class Api extends CI_Controller {
         $type = (int)$this->input->post('type',true);
 
         $base64info_ori = $this->input->post('base64info', true);
-        $new_base64info = str_ireplace('[removed]', '"data:image/png;base64,', $base64info_ori);
-die($_POST['base64info']);
+        if(!$base64info_ori){
+            $base64info_ori = file_get_contents("php://input");
+            $tmptmp = explode('base64info=', urldecode($base64info_ori));
+            $new_base64info = $tmptmp[1];
+        } else {
+            $new_base64info = str_ireplace('[removed]', '"data:image/png;base64,', $base64info_ori);
+        }
         if($type==1){
             $base64info_tmp = $new_base64info;
         } elseif($type==2) {
             $base64info_tmp = json_decode(  $new_base64info , true);
         }
-var_dump($base64info_tmp);die();
         if(!$type || !$name || !$info || !$base64info_tmp ) {
             _ar(array('msg'=>'infomation not complete'), false);
         }
