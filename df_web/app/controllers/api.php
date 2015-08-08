@@ -55,7 +55,6 @@ class Api extends CI_Controller {
         }
 
         if ( $this->plat->addNew($user_id, $data) ){
-            $this->plat->removeOne(array('id'=>$tmp_id));
             _ar(array(), true);
         } else {
             _ar(array('msg'=>'insert information failed'), false);
