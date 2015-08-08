@@ -281,7 +281,7 @@ Plat.prototype.select_frame = function(frame_id){
 }
 
 //save pic or animation to server
-Plat.prototype.save_info = function(user_id,pic_name,callback){
+Plat.prototype.save_info = function(tmp_id,user_id,pic_name,callback){
     if ( !pic_name || !callback ){
         return false;
     }
@@ -292,7 +292,7 @@ Plat.prototype.save_info = function(user_id,pic_name,callback){
         var info = JSON.stringify( this._animation_info );
         var base64info = JSON.stringify( this._base64info );
     }
-    var post_data = {type: this._type, user_id:user_id, name:pic_name, info:info, base64info:base64info};
+    var post_data = {tmp_id: tmp_id, type: this._type, user_id:user_id, name:pic_name, info:info, base64info:base64info};
     $.post('/api/add_info', post_data, callback, 'json');
 }
 

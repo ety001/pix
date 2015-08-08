@@ -72,8 +72,11 @@ class Plat_model extends CI_Model {
         return $this->master->delete(self::TIKTOK_PLAT_PIX_TABLE, $conditions);
     }
 
-    public function getAll(){
-        $query = $this->master->get(self::TIKTOK_PLAT_PIX_TABLE);
+    public function getAll($offset=null, $limit=null, $where=null){
+        if($where){
+            $this->master->where( $where );
+        }
+        $query = $this->master->get(self::TIKTOK_PLAT_PIX_TABLE, $limit, $offset);
         $result = $query->result_array();
         return $result;
     }

@@ -162,7 +162,7 @@ $(function(){
             setTimeout("$('#msg').hide();",2000);
             return false;
         }
-        var status = plat.save_info(user_id, pic_name, function(res){
+        var status = plat.save_info(tmp_id, user_id, pic_name, function(res){
             if(res.status === 'OK'){
                 alert('保存成功');
                 window.location="/";

@@ -32,7 +32,7 @@
           </div>         
           <div class="form-inline">
             <label class="input"><?php echo $data['lang']->line('beta_pic_name');?></label>
-            <input type="text" class="input-large" id="pic_name">
+            <input type="text" class="input-large" id="pic_name" value="<?php echo $data['info']['name'];?>">
             <button type="submit" id="submit_pic" class="btn"><?php echo $data['lang']->line('beta_save_btn');?></button>
           </div>
           <p><div id="msg"></div></p>
@@ -41,6 +41,7 @@
     </div>
 
     <script type="text/javascript">
+      var tmp_id = '<?php echo $data["id"];?>';
       var info;
       <?php if($data['info']):?>
       info = <?php echo $data["info"]["info"];?>;

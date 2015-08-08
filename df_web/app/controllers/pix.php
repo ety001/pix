@@ -43,6 +43,7 @@ class Pix extends CI_Controller {
         $data['footer_js'] = array('Color.Space.js', 'Color.Picker.Classic.js', 'add.js');
         $data['lang_type'] = $this->lang_type;
         $data['lang']   = $this->lang;
+        $data['id']     = $id;
         _betaViewer($data,'createworld');
     }
 
@@ -54,6 +55,7 @@ class Pix extends CI_Controller {
         $data['tpl_name'] = 'createanimation';
         $data['lang_type'] = $this->lang_type;
         $data['lang']   = $this->lang;
+        $data['id']     = $id;
         _betaViewer($data,'createanimation');
     }
 
