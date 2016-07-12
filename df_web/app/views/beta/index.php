@@ -1,4 +1,16 @@
     <div class="container">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- pix -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7536831447654223"
+     data-ad-slot="2569498974"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+    <div class="container">
       <ul class="thumbnails">
         <?php foreach($data['all'] as $k=>$v):?>
         <li class="span2">
