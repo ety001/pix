@@ -20,3 +20,16 @@
   </div>
   <hr>
 </div>
+
+<div class="container" style="margin-bottom: 10px;">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- pix -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7536831447654223"
+     data-ad-slot="2569498974"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
