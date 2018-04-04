@@ -88,6 +88,8 @@ class Pix extends CI_Controller {
     }
 
     public function yuyecaho_del() {
+        die();
+        return;
         $id = (int)$this->uri->rsegment(3);
         $info = $this->plat->getOneByID($id);
         if($info){
