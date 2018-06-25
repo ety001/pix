@@ -5,6 +5,13 @@
     <title>Pix</title>
     <link rel="stylesheet" type="text/css" href="/public/css/global.css">
     <link href="/public/css/bootstrap.min.css" rel="stylesheet">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-7536831447654223",
+          enable_page_level_ads: true
+     });
+</script>
     <?php echo $header_js;?>
     <?php echo $header_css;?>
 </head>
