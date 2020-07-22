@@ -17,4 +17,4 @@ ENV DF_USER root \
     DF_PREFIX tiktok_ \
     DF_ENV development
 
-CMD ['/usr/bin/supervisord', '-n', '-c', '/etc/supervisord.conf']
+CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
