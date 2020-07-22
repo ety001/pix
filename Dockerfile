@@ -2,14 +2,10 @@ FROM ety001/php:5.6
 
 RUN apk --no-cache add nginx supervisor && \
     mkdir -p /run/nginx && \
-	touch /var/lib/nginx/logs/error.log && \
-	touch /var/log/php-fpm.log && \
-	chown -R nobody:nobody /var/lib/nginx/logs/error.log && \
-	chown -R nobody:nobody /var/log/php-fpm.log && \
-	chown -R nobody:nobody /var/tmp/nginx/ && \
     sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 256M/g' /etc/php5/php.ini
 
 COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
+COPY ./config/php/php-fpm.conf /etc/php5/php-fpm.conf
 COPY ./config/supervisor/supervisord.conf /etc/supervisord.conf
 
 USER nobody
@@ -17,6 +13,7 @@ COPY ./df_core /var/www/df_core
 COPY ./df_web /var/www/df_web
 
 VOLUME /var/www/df_web/www/upload
+WORKDIR /var/www
 
 ENV DF_USER root \
     DF_PASS 123456 \
