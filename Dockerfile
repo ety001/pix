@@ -2,6 +2,11 @@ FROM ety001/php:5.6
 
 RUN apk --no-cache add nginx supervisor && \
     mkdir -p /run/nginx && \
+	touch /var/lib/nginx/logs/error.log && \
+	touch /var/log/php-fpm.log && \
+	chown -R nobody:nobody /var/lib/nginx/logs/error.log && \
+	chown -R nobody:nobody /var/log/php-fpm.log && \
+	chown -R nobody:nobody /var/tmp/nginx/ && \
     sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 256M/g' /etc/php5/php.ini
 
 COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
