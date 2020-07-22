@@ -8,9 +8,8 @@ COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./config/php/php-fpm.conf /etc/php5/php-fpm.conf
 COPY ./config/supervisor/supervisord.conf /etc/supervisord.conf
 
-USER nobody
-COPY ./df_core /var/www/df_core
-COPY ./df_web /var/www/df_web
+COPY --chown=nobody ./df_core /var/www/df_core
+COPY --chown=nobody ./df_web /var/www/df_web
 
 VOLUME /var/www/df_web/www/upload
 WORKDIR /var/www
