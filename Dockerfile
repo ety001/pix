@@ -8,8 +8,8 @@ COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./config/supervisor/supervisord.conf /etc/supervisord.conf
 
 USER nobody
-COPY ./df_core /var/www/
-COPY ./df_web /var/www/
+COPY ./df_core /var/www/df_core
+COPY ./df_web /var/www/df_web
 
 VOLUME /var/www/df_web/www/upload
 
