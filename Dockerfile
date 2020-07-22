@@ -14,11 +14,11 @@ COPY --chown=nobody ./df_web /var/www/df_web
 VOLUME /var/www/df_web/www/upload
 WORKDIR /var/www
 
-ENV DF_USER root \
-    DF_PASS 123456 \
-    DF_HOST localhost \
-    DF_DB   tiktok \
-    DF_PREFIX tiktok_ \
-    DF_ENV development
+ENV DF_USER=root \
+    DF_PASS=123456 \
+    DF_HOST=localhost \
+    DF_DB=tiktok \
+    DF_PREFIX=tiktok_ \
+    DF_ENV=development
 
 CMD ["/usr/bin/supervisord", "-n", "-c", "/etc/supervisord.conf"]
