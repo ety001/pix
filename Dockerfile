@@ -7,7 +7,7 @@ RUN apk --no-cache add nginx supervisor && \
 COPY ./config/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./config/php/php-fpm.conf /etc/php5/php-fpm.conf
 COPY ./config/supervisor/supervisord.conf /etc/supervisord.conf
-COPY ./config/custom-php-fpm5.sh /usr/bin/custom-php-fpm5.sh
+COPY ./config/custom-nginx.sh /usr/bin/custom-nginx.sh
 
 COPY --chown=nobody ./df_core /var/www/df_core
 COPY --chown=nobody ./df_web /var/www/df_web
