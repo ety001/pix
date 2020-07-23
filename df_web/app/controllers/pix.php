@@ -60,6 +60,7 @@ class Pix extends CI_Controller {
     }
 
     public function advice() {
+        return redirect('https://akawa.ink/about/');
         $data['tpl_name'] = 'advice';
         $data['lang_type'] = $this->lang_type;
         $data['lang']   = $this->lang;
