@@ -19,7 +19,7 @@
     <div class="container">
         <hr>
         <div class="footer">
-            <p>&copy; Company 2014&nbsp;&nbsp;
+            <p>&copy; 2014&nbsp;&nbsp;
         </div>
     </div>
 <?php if(ENVIRONMENT == 'production'):?>
