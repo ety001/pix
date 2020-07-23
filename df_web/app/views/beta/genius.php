@@ -35,7 +35,18 @@
   <?php if($lang_type==1):?>
   <div class="container" style="max-width: 530px;">
     <div style="margin:10px 0;">
-      <a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=7a163fd0-5019-4713-8a94-32e169a70221&style=2&textcolor=#000000&bgcolor=none&bp=sinaminiblog,qzone,douban,weixin,renren,qqim&text=分享"></script>
+      <div class="bshare-custom icon-medium">
+        <a title="分享到QQ空间" class="bshare-qzone"></a>
+        <a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+        <a title="分享到人人网" class="bshare-renren"></a>
+        <a title="分享到腾讯微博" class="bshare-qqmb"></a>
+        <a title="分享到网易微博" class="bshare-neteasemb"></a>
+        <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+        <span class="BSHARE_COUNT bshare-share-count">0</span>
+      </div>
+      <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+      <script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+      <!--<a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#uuid=7a163fd0-5019-4713-8a94-32e169a70221&style=2&textcolor=#000000&bgcolor=none&bp=sinaminiblog,qzone,douban,weixin,renren,qqim&text=分享"></script>
       <script type="text/javascript">
         bShare.addEntry({
             title: "<?php echo $info['name'];?>",
@@ -43,9 +54,9 @@
             summary: "<?php echo $lang->line('beta_share_text');?>",
             pic: "<?php echo base_url( _createPNGPath($info['thumb_name']) );?>"
         });
-      </script>
+      </script>-->
     </div>
-    <div>
+    <div style="margin:10px 0;">
       <div id="disqus_thread"></div>
       <script>
       var disqus_config = function () {
